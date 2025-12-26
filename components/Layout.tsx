@@ -19,14 +19,14 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab }) =>
   return (
     <div className="flex h-screen bg-[#050505] text-white overflow-hidden font-inter flex-col">
       {/* Main Content Area */}
-      <main className="flex-1 overflow-y-auto bg-black scroll-smooth relative pb-24">
-        <div className="max-w-[1440px] mx-auto min-h-full bg-gradient-to-b from-[#0a0a0a] to-[#050505] relative">
+      <main className="flex-1 overflow-y-auto bg-black scroll-smooth relative no-scrollbar">
+        <div className="max-w-[1440px] mx-auto min-h-full bg-gradient-to-b from-[#0a0a0a] to-[#050505] relative pb-24">
           {children}
         </div>
       </main>
 
-      {/* Mobile-First Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 h-20 bg-black/80 backdrop-blur-3xl flex items-center justify-around border-t border-white/5 z-[90] safe-area-bottom">
+      {/* Persistent Bottom Navigation - Higher Z-Index */}
+      <nav className="fixed bottom-0 left-0 right-0 h-20 bg-black/90 backdrop-blur-3xl flex items-center justify-around border-t border-white/5 z-[200] safe-area-bottom shadow-[0_-10px_30px_rgba(0,0,0,0.8)]">
         {tabs.map(tab => (
           <button
             key={tab.id}
