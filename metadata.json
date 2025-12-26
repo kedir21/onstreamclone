@@ -1,0 +1,8 @@
+{
+  "name": "OnStream TV - Advanced Streaming Experience",
+  "description": "A high-performance movie and TV show streaming application built with React, mimicking Android TV/Mobile UX with TMDB integration and native-style video playback.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
